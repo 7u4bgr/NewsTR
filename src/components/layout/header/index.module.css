@@ -28,9 +28,10 @@
 }
 .background .texts .logo .search {
   display: flex;
+  align-items: center;
+  justify-content: center;
   margin-right: 3%;
   height: 4vh;
-  margin-top: 8px;
 }
 .background .texts .logo .search input {
   border-radius: 20px;

@@ -27,9 +27,11 @@
       }
       .search {
         display: flex;
+        align-items: center;
+        justify-content: center;
         margin-right: 3%;
         height: 4vh;
-        margin-top: 8px;
+      
         input {
           border-radius: 20px;
           outline: rgb(124, 21, 21);
