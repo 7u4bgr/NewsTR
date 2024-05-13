@@ -100,6 +100,9 @@
     width: 30%;
     height: 53vh;
   }
+  .maps a .images img {
+    height: 30vh;
+  }
   .maps a .tags p {
     display: -webkit-box;
     -webkit-line-clamp: 5;

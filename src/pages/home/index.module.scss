@@ -108,7 +108,12 @@
       a{
           width: 30%;
           height: 53vh;
-          
+          .images{
+            img{
+        height: 30vh;
+
+            }
+          }
           .tags{
             
             p{
