@@ -1,115 +1,28 @@
-.alls{
-    .flex{
-     
-      .slideshow{
-        background-color: rgb(255, 255, 255);
-        display: flex;
-        justify-content: center;
-
-        img{
-            margin-top: 30px;
-            margin-left: 25%;
-            width: 90%;
-            height: 30vh;
-            object-fit: cover;
-            margin-bottom: 30px;
-            border-radius: 30px;
-        }
-        
-    }  
-    .texts{
-        display: none;
-    }
-    }
-    .hovers{
-        
-        background-color: black;
-        
-        h2{
-            font-family: "MuseoModerno", sans-serif;
-            color: white;
-            line-height: 20px;
-            font-size: 10px;
-            padding-left: 30px;
-        }
-    }
-    }
-@media(min-width:768px){
-    .alls{
-        .flex{
-
-            .slideshow{
-                img{
-                    height: 50vh;
-                }
-            }
-            .texts{
-                display: none;
-            }
-        }
-        .hovers{
-            display: flex;
-            align-items: center;
-            height: 5vh;
-            h2{
-                font-size: 14px;
-            }
-        }
-    }
-}
-@media(min-width:992px){
-    .divs{
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        .alls{
-                background-color: rgb(255, 255, 255);
-               padding-bottom: 40px;
-               margin-top: 40px;
-            .flex{
-                display: flex;
-                justify-content:space-between;
-         gap: 40px;
-               
-                .slideshow{
-                    background-color: transparent;
-                    display: flex;
-                    flex-direction: column;
-                   margin-top: 0;
+.divs {
     
-                   
-                    img{
-                        margin-top: 0;
-                        margin-bottom: 0;
-                        width: 80%;
-                    margin-left: 30px;
-                        height: 415px;
-                    }
-                    
-                }
-                .texts{
-                    display: flex;
-                    width: 50%;
-                   
-                    iframe{
-                        border-radius: 40px;
-                        width: 70%;
-                    }
-                   
-                }
-            }
-            .hovers{
-                margin-top: 10px;
-                background-color: black;
-                height: 8.66vh;
-                h2{
-                    font-family: "MuseoModerno", sans-serif;
-                    color: white;
-                    font-size: 20px;
-                    padding-left: 30px;
-                }
-            }
-            
-        }
+    .slideshow {
+      margin-bottom: 50px;
+      img {
+        cursor: pointer;
+        height: 30vh;
+      }
     }
-}
+  }
+  
+  @media (min-width: 768px) {
+    .divs {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 80%;
+      margin: auto;
+      .slideshow {
+        img {
+          height: 50vh;
+        }
+      }
+    }
+  }
+  
+
+  

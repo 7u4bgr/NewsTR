@@ -2,49 +2,68 @@ import React, { useState, useEffect } from "react";
 import styles from "./index.module.css";
 import { LinkedlnIcon } from "../../icons";
 import Wrapper from "../UI";
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Autoplay, Pagination } from "swiper/modules";
+import "swiper/css";
+import "swiper/css/navigation";
+import "swiper/css/pagination";
+import "swiper/css/scrollbar";
 
 const Slideshow = ({ images }) => {
   const [currentIndex, setCurrentIndex] = useState(0);
 
   useEffect(() => {
     const intervalId = setInterval(() => {
-      // Increment the index to move to the next image
+    
       setCurrentIndex((prevIndex) => (prevIndex + 1) % images.length);
-    }, 2000); // Change slide every 3 seconds
+    }, 2000); 
 
-    // Cleanup the interval on component unmount
+  
     return () => clearInterval(intervalId);
   }, [currentIndex, images.length]);
 
   return (
     <>
-    <div className={styles.divs}>
-
-       <Wrapper>
-      <div className={styles.alls}>
-
-          <div className={styles.flex}>
-            <div className={styles.slideshow}>
-              <img
-                src={images[currentIndex]}
-                alt={`Slide ${currentIndex + 1}`}
-                />
-            </div>
-            <div className={styles.texts}>
-              <iframe
-                height="415"
-                src="https://www.youtube.com/embed/OOtxXPaQvoM?si=toZgLGlAlvoC4eS8"
-                title="YouTube video player"
-                frameborder="0"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                allowfullscreen
-                ></iframe>
-            </div>
-          </div>
-        
+      <div className={styles.divs}>
+       
+          <Swiper
+            modules={[Autoplay, Pagination]}
+            className={styles.price}
+            spaceBetween={50}
+            slidesPerView={3}
+            pagination={{ clickable: true }} 
+            autoplay={{ delay: 2000 }}
+     
+            onSwiper={(swiper) => console.log(swiper)}
+            onSlideChange={() => console.log("slide change")}
+            breakpoints={{
+              0: {
+                spaceBetween: 24,
+                slidesPerView: 1,
+              },
+              768: {
+                spaceBetween: 24,
+                slidesPerView: 1,
+              },
+              992: {
+                spaceBetween: 50,
+                slidesPerView: 2,
+              },
+            }}
+          >
+            {images.map((image, index) => (
+              <SwiperSlide key={index}>
+                <div className={styles.slideshow}>
+                  <img
+                    src={image}
+                    alt={`Slide ${index + 1}`}
+                  />
+                </div>
+              </SwiperSlide>
+            ))}
+          </Swiper>
+      
       </div>
-                </Wrapper>
-    </div>
     </>
   );
 };
@@ -55,7 +74,11 @@ const App = () => {
     "https://www.cumhuriyet.com.tr/Archive/2023/11/16/2141707/kapak_151158.jpg",
     "https://www.cumhuriyet.com.tr/Archive/2023/11/16/2141708/kapak_151418.jpg",
     "https://www.cumhuriyet.com.tr/Archive/2023/11/16/2141711/kapak_152121.jpg",
-    "https://cdn.karar.com/news/1628113.jpg"
+    "https://www.cumhuriyet.com.tr/Archive/2023/11/16/2141711/kapak_152121.jpg",
+    "https://www.cumhuriyet.com.tr/Archive/2023/11/16/2141711/kapak_152121.jpg",
+    "https://www.cumhuriyet.com.tr/Archive/2023/11/16/2141711/kapak_152121.jpg",
+    "https://www.cumhuriyet.com.tr/Archive/2023/11/16/2141711/kapak_152121.jpg",
+    "https://cdn.karar.com/news/1628113.jpg",
   ];
 
   return (

@@ -1,94 +1,20 @@
-.alls .flex .slideshow {
-  background-color: rgb(255, 255, 255);
-  display: flex;
-  justify-content: center;
+.divs .slideshow {
+  margin-bottom: 50px;
 }
-.alls .flex .slideshow img {
-  margin-top: 30px;
-  margin-left: 25%;
-  width: 90%;
+.divs .slideshow img {
+  cursor: pointer;
   height: 30vh;
-  -o-object-fit: cover;
-     object-fit: cover;
-  margin-bottom: 30px;
-  border-radius: 30px;
-}
-.alls .flex .texts {
-  display: none;
-}
-.alls .hovers {
-  background-color: black;
-}
-.alls .hovers h2 {
-  font-family: "MuseoModerno", sans-serif;
-  color: white;
-  line-height: 20px;
-  font-size: 10px;
-  padding-left: 30px;
 }
 
 @media (min-width: 768px) {
-  .alls .flex .slideshow img {
-    height: 50vh;
-  }
-  .alls .flex .texts {
-    display: none;
-  }
-  .alls .hovers {
-    display: flex;
-    align-items: center;
-    height: 5vh;
-  }
-  .alls .hovers h2 {
-    font-size: 14px;
-  }
-}
-@media (min-width: 992px) {
   .divs {
     display: flex;
     align-items: center;
     justify-content: center;
-  }
-  .divs .alls {
-    background-color: rgb(255, 255, 255);
-    padding-bottom: 40px;
-    margin-top: 40px;
-  }
-  .divs .alls .flex {
-    display: flex;
-    justify-content: space-between;
-    gap: 40px;
-  }
-  .divs .alls .flex .slideshow {
-    background-color: transparent;
-    display: flex;
-    flex-direction: column;
-    margin-top: 0;
-  }
-  .divs .alls .flex .slideshow img {
-    margin-top: 0;
-    margin-bottom: 0;
     width: 80%;
-    margin-left: 30px;
-    height: 415px;
+    margin: auto;
   }
-  .divs .alls .flex .texts {
-    display: flex;
-    width: 50%;
-  }
-  .divs .alls .flex .texts iframe {
-    border-radius: 40px;
-    width: 70%;
-  }
-  .divs .alls .hovers {
-    margin-top: 10px;
-    background-color: black;
-    height: 8.66vh;
-  }
-  .divs .alls .hovers h2 {
-    font-family: "MuseoModerno", sans-serif;
-    color: white;
-    font-size: 20px;
-    padding-left: 30px;
+  .divs .slideshow img {
+    height: 50vh;
   }
 }/*# sourceMappingURL=index.module.css.map */

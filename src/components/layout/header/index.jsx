@@ -4,10 +4,14 @@ import Carpetlogo from '../../../assets/images/carpetlogo.jpg'
 import { GitIcon, GithubIcon, InstaIcon, LinkedlnIcon, MailIcon, MenuIcon, SearchIcon, WhatsIcon } from '../../../icons';
 import Slides from '../../slides';
 import { Link } from 'react-router-dom';
+import Wrapper from '../../UI';
 const Header = () => {
   return(
 <>
+
     <div className={styles.background}>
+<Wrapper>
+
         <div className={styles.texts}>
             <div className={styles.logo}>
               <div className={styles.backh2}>
@@ -30,13 +34,15 @@ const Header = () => {
                 </Link>
               </div>
               <div className={styles.search}>
-                    <input type="text" />
-                    <SearchIcon/>
+                    <input placeholder='Search...' type="text" />
+                  
               </div>
                     
             </div>
         </div>
+    </Wrapper>
     </div>
+
     <div className={styles.background1}>
         <div className={styles.texts1}>
               <Link to={"/sport"}>İdman</Link>
@@ -48,8 +54,10 @@ const Header = () => {
               <Link to={"/culture"}>Mədəniyyət</Link>
               <Link to={"/tourism"}>Turizm</Link>
         </div>
+
     </div>
     <Slides/>
+
 </>
     )
 };
